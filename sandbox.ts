@@ -1,37 +1,42 @@
+// explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age = 'patrick';
+age = 20;
+
+// isLoggedIn = 25
+isLoggedIn = true;
+
 // arrays
-let names = ['patrick', 'kevin', 'robert'];
+let dev: string[] = [];
 
-names.push('toad');
-// names.push(3);
-// names[0] = 3;
+dev.push('patrick');
 
-let numbers = [10, 20, 30, 40];
+// union types
+let mixed: (string | number | boolean)[] = [];
+mixed.push('hello');
+mixed.push(20);
+mixed.push(false);
+console.log(mixed);
 
-numbers.push(25);
-// numbers.push('patrick');
-// numbers[1] = 'patrick';
-
-let mixed = ['ken', 4, 'kurt', 8, 9];
-
-mixed.push('patrick');
-mixed.push(10);
-mixed[0] = 3;
+let uid: string | number;
+uid = '123';
+uid = 123;
 
 // objects
-let dev = {
-  name: 'patrick',
-  belt: 'black',
-  age: 20,
+let devOne: object;
+devOne = { name: 'patrick', age: 20 };
+
+let devTwo: {
+  name: string;
+  age: number;
+  beltColour: string;
 };
 
-dev.age = 30;
-dev.name = 'robert';
-// dev.age = '30'
-// dev.skills = ['css', 'html']
-
-dev = {
-  name: 'patrick',
-  belt: 'orange',
+devTwo = {
+  name: 'robert',
   age: 25,
-  skills: [],
+  beltColour: 'black',
 };

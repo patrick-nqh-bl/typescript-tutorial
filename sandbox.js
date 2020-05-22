@@ -1,29 +1,29 @@
+// explicit types
+var character;
+var age;
+var isLoggedIn;
+// age = 'patrick';
+age = 20;
+// isLoggedIn = 25
+isLoggedIn = true;
 // arrays
-var names = ['patrick', 'kevin', 'robert'];
-names.push('toad');
-// names.push(3);
-// names[0] = 3;
-var numbers = [10, 20, 30, 40];
-numbers.push(25);
-// numbers.push('patrick');
-// numbers[1] = 'patrick';
-var mixed = ['ken', 4, 'kurt', 8, 9];
-mixed.push('patrick');
-mixed.push(10);
-mixed[0] = 3;
+var dev = [];
+dev.push('patrick');
+// union types
+var mixed = [];
+mixed.push('hello');
+mixed.push(20);
+mixed.push(false);
+console.log(mixed);
+var uid;
+uid = '123';
+uid = 123;
 // objects
-var dev = {
-    name: 'patrick',
-    belt: 'black',
-    age: 20
-};
-dev.age = 30;
-dev.name = 'robert';
-// dev.age = '30'
-// dev.skills = ['css', 'html']
-dev = {
-    name: 'patrick',
-    belt: 'orange',
+var devOne;
+devOne = { name: 'patrick', age: 20 };
+var devTwo;
+devTwo = {
+    name: 'robert',
     age: 25,
-    skills: []
+    beltColour: 'black'
 };
