@@ -1,13 +1,29 @@
-var character = 'patrick';
-var age = 30;
-var isBlackBelt = false;
-// character = 20;
-character = 'robert';
-// age = "kurt";
-age = 30;
-// isBlackBelt = 'yes';
-isBlackBelt = true;
-var circ = function (diameter) {
-    return diameter * Math.PI;
+// arrays
+var names = ['patrick', 'kevin', 'robert'];
+names.push('toad');
+// names.push(3);
+// names[0] = 3;
+var numbers = [10, 20, 30, 40];
+numbers.push(25);
+// numbers.push('patrick');
+// numbers[1] = 'patrick';
+var mixed = ['ken', 4, 'kurt', 8, 9];
+mixed.push('patrick');
+mixed.push(10);
+mixed[0] = 3;
+// objects
+var dev = {
+    name: 'patrick',
+    belt: 'black',
+    age: 20
 };
-console.log(circ(7.5));
+dev.age = 30;
+dev.name = 'robert';
+// dev.age = '30'
+// dev.skills = ['css', 'html']
+dev = {
+    name: 'patrick',
+    belt: 'orange',
+    age: 25,
+    skills: []
+};
