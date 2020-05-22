@@ -1,42 +1,23 @@
-// explicit types
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+let age: any = 25;
 
-// age = 'patrick';
-age = 20;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'patrick' };
+console.log(age);
 
-// isLoggedIn = 25
-isLoggedIn = true;
+let mixed: any[] = [];
 
-// arrays
-let dev: string[] = [];
-
-dev.push('patrick');
-
-// union types
-let mixed: (string | number | boolean)[] = [];
-mixed.push('hello');
-mixed.push(20);
+mixed.push(5);
+mixed.push('patrick');
 mixed.push(false);
 console.log(mixed);
 
-let uid: string | number;
-uid = '123';
-uid = 123;
+let dev: { name: any; age: any };
 
-// objects
-let devOne: object;
-devOne = { name: 'patrick', age: 20 };
+dev = { name: 'patrick', age: 20 };
+console.log(dev);
 
-let devTwo: {
-  name: string;
-  age: number;
-  beltColour: string;
-};
-
-devTwo = {
-  name: 'robert',
-  age: 25,
-  beltColour: 'black',
-};
+dev = { age: 25, name: 'robert' };
+console.log(dev);
