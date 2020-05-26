@@ -28,35 +28,32 @@ form.addEventListener('submit', (e: Event) => {
   list.render(doc, type.value, 'end');
 });
 
-// GENERICS
+// ENUMS
 
-const addUID = <T extends { name: string }>(obj: T) => {
-  let uid = Math.floor(Math.random() * 100);
-  return { ...obj, uid };
-};
+enum ResourceType {
+  BOOK,
+  AUTHOR,
+  FILM,
+  DIRECTOR,
+  PERSON,
+}
 
-let docOne = addUID({ name: 'patrick', age: 20 });
-// let docTwo = addUID('hello')
-
-console.log(docOne.name);
-
-// with interface
 interface Resource<T> {
   uid: number;
-  resourceName: string;
+  resourceType: number;
   data: T;
 }
 
-const docThree: Resource<object> = {
+const docOne: Resource<object> = {
   uid: 1,
-  resourceName: 'person',
-  data: { name: 'robert' },
+  resourceType: ResourceType.BOOK,
+  data: { title: "I'm a Developer" },
+};
+const docTwo: Resource<object> = {
+  uid: 10,
+  resourceType: ResourceType.PERSON,
+  data: { name: 'patrick' },
 };
 
-const docFour: Resource<string[]> = {
-  uid: 2,
-  resourceName: 'shopping list',
-  data: ['bread', 'milk', 'toilet roll'],
-};
-
-console.log(docThree, docFour);
+console.log(docOne);
+console.log(docTwo);
